@@ -298,11 +298,12 @@ const styles = `
 
     .hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-content { padding: 48px 20px 32px; max-width: 100%; }
-    .hero-media { min-height: 340px; }
+    .hero-media { min-height: 340px; display: flex; align-items: center; justify-content: center; }
 
     .hero-illustration {
-      height: 95%; width: auto;
-      left: 50%; transform: translateX(-50%);
+      height: 90%; width: auto;
+      position: relative; left: auto; transform: none;
+      margin: 0 auto; display: block;
     }
 
     .cases-section { padding: 48px 20px; }

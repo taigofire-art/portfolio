@@ -189,6 +189,7 @@ export default function Sobre() {
         {/* CONTEÚDO */}
         <main className="sobre-content">
 
+          {/* Linha 1: Competências + Experiência em Destaque */}
           <div className="content-two-col">
 
             <section className="sobre-section">
@@ -221,6 +222,9 @@ export default function Sobre() {
             </section>
 
           </div>
+
+          {/* Linha 2: Formação + Trajetória */}
+          <div className="content-two-col">
 
             <section className="sobre-section">
               <div className="sobre-section-label">Formação Acadêmica</div>
@@ -258,9 +262,10 @@ export default function Sobre() {
               </div>
             </section>
 
+          </div>
+
         </main>
       </div>
-
       <footer className="footer">
         <span className="footer-name">Tiago Carvalho</span>
         <ul className="footer-links">
