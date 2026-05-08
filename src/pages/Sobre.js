@@ -250,7 +250,7 @@ export default function Sobre() {
         <span className="footer-name">Tiago Carvalho</span>
         <ul className="footer-links">
           <li><a href="mailto:tacarvalho86@gmail.com">tacarvalho86@gmail.com</a></li>
-          <li><a href="https://linkedin.com/in/tiagoazevedodesign" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://www.linkedin.com/in/tiagoadecarvalho/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
           <li><a href="/contato">contato</a></li>
         </ul>
       </footer>

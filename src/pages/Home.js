@@ -526,7 +526,7 @@ export default function PortfolioHome() {
             </a>
           </li>
           <li>
-            <a href="https://linkedin.com/in/tiagoazevedodesign"
+            <a href="https://www.linkedin.com/in/tiagoadecarvalho/"
               target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
