@@ -76,6 +76,12 @@ const styles = `
   }
   .sobre-section-label::after { content: ''; flex: 1; height: 0.5px; background: var(--border); }
 
+  /* Conteúdo em 2 colunas */
+  .content-two-col {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 40px; margin-bottom: 0;
+  }
+
   /* Competências */
   .skills-grid {
     display: grid; grid-template-columns: repeat(3, 1fr);
@@ -149,6 +155,7 @@ const styles = `
     .sobre-avatar { height: 360px; }
     .sobre-avatar img { object-position: top center; }
     .sobre-content { padding: 40px 20px 80px; }
+    .content-two-col { grid-template-columns: 1fr; gap: 0; }
     .skills-grid { grid-template-columns: 1fr 1fr; }
     .footer { padding: 20px; flex-direction: column; gap: 14px; text-align: center; }
     .footer-links { flex-wrap: wrap; justify-content: center; }
@@ -182,66 +189,74 @@ export default function Sobre() {
         {/* CONTEÚDO */}
         <main className="sobre-content">
 
-          <section className="sobre-section">
-            <div className="sobre-section-label">Competências</div>
-            <div className="skills-grid">
-              {["Product Design","Enterprise UX","Service Design","Sistemas Complexos","UX Writing","Prototipação","Figma","Salesforce","OutSystems","Notion","Miro","Jira"].map((s, i) => (
-                <div key={i} className="skill-item">
-                  <div className="skill-dot" />
-                  {s}
-                </div>
-              ))}
-            </div>
-          </section>
+          <div className="content-two-col">
 
-          <section className="sobre-section">
-            <div className="sobre-section-label">Formação Acadêmica</div>
-            <div className="formacao-list">
-              <div className="formacao-item">
-                <strong>Pós-graduação em User Experience and Beyond</strong>
-                <span className="formacao-meta">PUCRS · 2021 – 2022</span>
+            <section className="sobre-section">
+              <div className="sobre-section-label">Competências</div>
+              <div className="skills-grid">
+                {["Product Design","Enterprise UX","Service Design","Sistemas Complexos","UX Writing","Prototipação","Figma","Salesforce","OutSystems","Notion","Miro","Jira"].map((s, i) => (
+                  <div key={i} className="skill-item">
+                    <div className="skill-dot" />
+                    {s}
+                  </div>
+                ))}
               </div>
-              <div className="formacao-item">
-                <strong>Tecnólogo em Produção Multimídia</strong>
-                <span className="formacao-meta">Centro Universitário FMU · 2013 – 2014</span>
+            </section>
+
+            <section className="sobre-section">
+              <div className="sobre-section-label">Experiência em Destaque</div>
+              <div className="exp-list">
+                {[
+                  { year: "2021", company: "Banco BV (via consultoria Mooven)", desc: <>Unifiquei sistemas de atendimento no Salesforce, <strong>reduzindo em até 30%</strong> o tempo de operação e melhorando a experiência dos analistas.</> },
+                  { year: "2024", company: "Petrobras (via consultoria TCS)", desc: <>Melhorei a experiência de sistemas corporativos em OutSystems por meio de fluxos, protótipos e análises com usuários, aumentando a eficiência operacional.</> },
+                  { year: "2025", company: "Pátria Investments (via consultoria ília)", desc: <>Transformei processos manuais em uma plataforma Salesforce para gestão de ativos imobiliários, estruturando fluxos e protótipos com usuários e gerando maior controle e visibilidade do negócio.</> },
+                ].map((item, i) => (
+                  <div key={i} className="exp-item">
+                    <div className="exp-year">{item.year}</div>
+                    <div className="exp-company">{item.company}</div>
+                    <div className="exp-desc">{item.desc}</div>
+                  </div>
+                ))}
               </div>
-            </div>
-          </section>
+            </section>
 
-          <section className="sobre-section">
-            <div className="sobre-section-label">Trajetória</div>
-            <div className="timeline">
-              {[
-                { year: "2017", text: "Início da transição para UX — desenvolvimento de produtos digitais centrados no usuário." },
-                { year: "2019", text: <><strong>Cielo</strong> — UX Designer na maquininha de cartão e sistemas de atendimento.</> },
-                { year: "2021", text: <><strong>Banco BV</strong> via Mooven — sistemas complexos, Salesforce e atendimento omnichannel.</> },
-                { year: "2024", text: <><strong>Petrobras</strong> via TCS — sistemas corporativos com OutSystems, fluxos e protótipos.</> },
-                { year: "2025", text: <><strong>Pátria Investments</strong> via ília — transformação digital, gestão de ativos imobiliários no Salesforce.</> },
-              ].map((item, i) => (
-                <div key={i} className="timeline-item">
-                  <span className="timeline-year">{item.year}</span>
-                  <span className="timeline-content">{item.text}</span>
-                </div>
-              ))}
-            </div>
-          </section>
+          </div>
 
-          <section className="sobre-section">
-            <div className="sobre-section-label">Experiência em Destaque</div>
-            <div className="exp-list">
-              {[
-                { year: "2021", company: "Banco BV (via consultoria Mooven)", desc: <>Unifiquei sistemas de atendimento no Salesforce, <strong>reduzindo em até 30%</strong> o tempo de operação e melhorando a experiência dos analistas.</> },
-                { year: "2024", company: "Petrobras (via consultoria TCS)", desc: <>Melhorei a experiência de sistemas corporativos em OutSystems por meio de fluxos, protótipos e análises com usuários, aumentando a eficiência operacional.</> },
-                { year: "2025", company: "Pátria Investments (via consultoria ília)", desc: <>Transformei processos manuais em uma plataforma Salesforce para gestão de ativos imobiliários, estruturando fluxos e protótipos com usuários e gerando maior controle e visibilidade do negócio.</> },
-              ].map((item, i) => (
-                <div key={i} className="exp-item">
-                  <div className="exp-year">{item.year}</div>
-                  <div className="exp-company">{item.company}</div>
-                  <div className="exp-desc">{item.desc}</div>
+            <section className="sobre-section">
+              <div className="sobre-section-label">Formação Acadêmica</div>
+              <div className="formacao-list">
+                <div className="formacao-item">
+                  <strong>Pós-graduação em User Experience and Beyond</strong>
+                  <span className="formacao-meta">PUCRS · 2021 – 2022</span>
                 </div>
-              ))}
-            </div>
-          </section>
+                <div className="formacao-item">
+                  <strong>Tecnólogo em Produção Multimídia</strong>
+                  <span className="formacao-meta">Centro Universitário FMU · 2013 – 2014</span>
+                </div>
+                <div className="formacao-item">
+                  <strong>Comunicação Visual, Graphic Design</strong>
+                  <span className="formacao-meta">ETEC Albert Einstein · 2009 – 2010</span>
+                </div>
+              </div>
+            </section>
+
+            <section className="sobre-section">
+              <div className="sobre-section-label">Trajetória</div>
+              <div className="timeline">
+                {[
+                  { year: "2017", text: "Início da transição para UX — desenvolvimento de produtos digitais centrados no usuário." },
+                  { year: "2019", text: <><strong>Cielo</strong> — UX Designer na maquininha de cartão e sistemas de atendimento.</> },
+                  { year: "2021", text: <><strong>Banco BV</strong> via Mooven — sistemas complexos, Salesforce e atendimento omnichannel.</> },
+                  { year: "2024", text: <><strong>Petrobras</strong> via TCS — sistemas corporativos com OutSystems, fluxos e protótipos.</> },
+                  { year: "2025", text: <><strong>Pátria Investments</strong> via ília — transformação digital, gestão de ativos imobiliários no Salesforce.</> },
+                ].map((item, i) => (
+                  <div key={i} className="timeline-item">
+                    <span className="timeline-year">{item.year}</span>
+                    <span className="timeline-content">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
 
         </main>
       </div>
