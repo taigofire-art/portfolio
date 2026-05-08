@@ -266,7 +266,7 @@ const styles = `
   .footer-links { display: flex; gap: 28px; list-style: none; }
   .footer-links a {
     font-size: 13px; color: var(--bic-mid); text-decoration: none;
-    transition: color 0.2s;
+    transition: color 0.2s; cursor: pointer; position: relative; z-index: 10;
   }
   .footer-links a:hover { color: var(--ink); }
 
