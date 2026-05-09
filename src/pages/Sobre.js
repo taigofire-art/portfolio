@@ -66,7 +66,6 @@ const styles = `
   /* ── COLUNA DIREITA: conteúdo ── */
   .sobre-content {
     padding: 56px 72px 100px;
-    max-width: 720px;
   }
   .sobre-section { margin-bottom: 52px; }
   .sobre-section-label {
