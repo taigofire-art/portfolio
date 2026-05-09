@@ -189,7 +189,7 @@ export default function Sobre() {
         {/* CONTEÚDO */}
         <main className="sobre-content">
 
-          {/* Linha 1: Competências + Experiência em Destaque */}
+          {/* Linha 1: Competências (esquerda grande) + Formação (direita) */}
           <div className="content-two-col">
 
             <section className="sobre-section">
@@ -203,28 +203,6 @@ export default function Sobre() {
                 ))}
               </div>
             </section>
-
-            <section className="sobre-section">
-              <div className="sobre-section-label">Experiência em Destaque</div>
-              <div className="exp-list">
-                {[
-                  { year: "2021", company: "Banco BV (via consultoria Mooven)", desc: <>Unifiquei sistemas de atendimento no Salesforce, <strong>reduzindo em até 30%</strong> o tempo de operação e melhorando a experiência dos analistas.</> },
-                  { year: "2024", company: "Petrobras (via consultoria TCS)", desc: <>Melhorei a experiência de sistemas corporativos em OutSystems por meio de fluxos, protótipos e análises com usuários, aumentando a eficiência operacional.</> },
-                  { year: "2025", company: "Pátria Investments (via consultoria ília)", desc: <>Transformei processos manuais em uma plataforma Salesforce para gestão de ativos imobiliários, estruturando fluxos e protótipos com usuários e gerando maior controle e visibilidade do negócio.</> },
-                ].map((item, i) => (
-                  <div key={i} className="exp-item">
-                    <div className="exp-year">{item.year}</div>
-                    <div className="exp-company">{item.company}</div>
-                    <div className="exp-desc">{item.desc}</div>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-          </div>
-
-          {/* Linha 2: Formação + Trajetória */}
-          <div className="content-two-col">
 
             <section className="sobre-section">
               <div className="sobre-section-label">Formação Acadêmica</div>
@@ -244,6 +222,11 @@ export default function Sobre() {
               </div>
             </section>
 
+          </div>
+
+          {/* Linha 2: Trajetória (esquerda) + Experiência em Destaque (direita) */}
+          <div className="content-two-col">
+
             <section className="sobre-section">
               <div className="sobre-section-label">Trajetória</div>
               <div className="timeline">
@@ -257,6 +240,23 @@ export default function Sobre() {
                   <div key={i} className="timeline-item">
                     <span className="timeline-year">{item.year}</span>
                     <span className="timeline-content">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section className="sobre-section">
+              <div className="sobre-section-label">Experiência em Destaque</div>
+              <div className="exp-list">
+                {[
+                  { year: "2021", company: "Banco BV (via consultoria Mooven)", desc: <>Unifiquei sistemas de atendimento no Salesforce, <strong>reduzindo em até 30%</strong> o tempo de operação e melhorando a experiência dos analistas.</> },
+                  { year: "2024", company: "Petrobras (via consultoria TCS)", desc: <>Melhorei a experiência de sistemas corporativos em OutSystems por meio de fluxos, protótipos e análises com usuários, aumentando a eficiência operacional.</> },
+                  { year: "2025", company: "Pátria Investments (via consultoria ília)", desc: <>Transformei processos manuais em uma plataforma Salesforce para gestão de ativos imobiliários, estruturando fluxos e protótipos com usuários e gerando maior controle e visibilidade do negócio.</> },
+                ].map((item, i) => (
+                  <div key={i} className="exp-item">
+                    <div className="exp-year">{item.year}</div>
+                    <div className="exp-company">{item.company}</div>
+                    <div className="exp-desc">{item.desc}</div>
                   </div>
                 ))}
               </div>

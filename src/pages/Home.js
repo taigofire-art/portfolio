@@ -177,10 +177,9 @@ const styles = `
   /* Imagem bic real no hero */
   .hero-illustration {
     position: absolute;
-    bottom: 0; right: 0; left: 0;
-    margin: 0 auto;
-    height: 108%; width: auto;
-    max-width: 115%;
+    bottom: 0; right: -2%; left: auto;
+    height: 118%; width: auto;
+    max-width: 130%;
     object-fit: contain;
     object-position: bottom center;
     opacity: 0;
@@ -298,12 +297,12 @@ const styles = `
 
     .hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-content { padding: 48px 20px 32px; max-width: 100%; }
-    .hero-media { min-height: 340px; display: flex; align-items: center; justify-content: center; }
+    .hero-media { min-height: 420px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 
     .hero-illustration {
-      height: 90%; width: auto;
-      position: relative; left: auto; transform: none;
-      margin: 0 auto; display: block;
+      height: 100%; width: auto;
+      position: absolute; left: 50%; transform: translateX(-50%);
+      bottom: 0; right: auto;
     }
 
     .cases-section { padding: 48px 20px; }
@@ -337,14 +336,6 @@ const cases = [
     desc: "Estruturei um processo crítico de priorização de projetos, centralizando um fluxo antes fragmentado em e-mails e documentos.",
     thumb: "petro",
     bg: "#e0e8f2",
-  },
-  {
-    id: "realestate",
-    tags: ["Pátria Investments", "Salesforce", "Service Design"],
-    title: "Transformação Digital de Gestão de Imóveis",
-    desc: "Transformei processos manuais em uma plataforma Salesforce estruturada, dando visibilidade e controle sobre ativos imobiliários.",
-    thumb: "realestate",
-    bg: "#dde6f0",
   },
   {
     id: "maquininha",
