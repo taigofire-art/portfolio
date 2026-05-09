@@ -177,16 +177,14 @@ const styles = `
   /* Imagem bic real no hero */
   .hero-illustration {
     position: absolute;
-    bottom: 0; right: 0; left: auto;
-    height: 112%; width: auto;
-    object-fit: contain;
-    object-position: bottom center;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-size: auto 112%;
+    background-position: right center;
+    mix-blend-mode: multiply;
     opacity: 0;
     animation: fadeInImg 1s ease forwards 0.5s;
-    mix-blend-mode: multiply;
     z-index: 1;
-    display: block;
-    transform: translateX(8%);
   }
 
   .hero-placeholder {
@@ -300,9 +298,8 @@ const styles = `
     .hero-media { min-height: 420px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 
     .hero-illustration {
-      height: 100%; width: auto;
-      position: absolute; left: 50%; transform: translateX(-50%);
-      bottom: 0; right: auto;
+      background-position: center bottom;
+      background-size: auto 100%;
     }
 
     .cases-section { padding: 48px 20px; }
@@ -374,10 +371,10 @@ const CASE_IMGS = {
 
 function HeroAvatarPlaceholder() {
   return (
-    <img
-      src={AVATAR_SRC}
-      alt="Tiago Carvalho — ilustração bic"
+    <div
       className="hero-illustration"
+      style={{ backgroundImage: `url(${AVATAR_SRC})` }}
+      aria-label="Tiago Carvalho — ilustração bic"
     />
   );
 }

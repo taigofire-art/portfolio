@@ -19,21 +19,19 @@ const styles = `
   }
 
   .contato-left {
-    background: #e8e4dc;
+    background: var(--surface);
     display: flex; align-items: flex-end; justify-content: center;
     overflow: hidden; position: relative; min-height: 480px;
   }
   .contato-left img {
     width: 100%; height: 100%;
-    object-fit: cover; object-position: center 50%;
+    object-fit: cover; object-position: center 40%;
     display: block;
-    transform: scale(0.75) translateY(-8%);
-    transform-origin: top center;
   }
 
   .contato-right {
     display: flex; flex-direction: column;
-    justify-content: center; padding: 80px 80px 80px 64px;
+    justify-content: center; padding: 64px 80px 64px 64px;
   }
   .contato-eyebrow {
     font-size: 11px; font-weight: 500; color: var(--bic-mid);
