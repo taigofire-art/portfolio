@@ -25,8 +25,10 @@ const styles = `
   }
   .contato-left img {
     width: 100%; height: 100%;
-    object-fit: cover; object-position: center 35%;
+    object-fit: cover; object-position: center 50%;
     display: block;
+    transform: scale(0.75) translateY(-8%);
+    transform-origin: top center;
   }
 
   .contato-right {

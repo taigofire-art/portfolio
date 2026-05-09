@@ -177,9 +177,8 @@ const styles = `
   /* Imagem bic real no hero */
   .hero-illustration {
     position: absolute;
-    bottom: 0;
-    left: 50%; transform: translateX(-50%);
-    height: 115%; width: auto;
+    bottom: 0; right: 0; left: auto;
+    height: 112%; width: auto;
     object-fit: contain;
     object-position: bottom center;
     opacity: 0;
@@ -187,6 +186,7 @@ const styles = `
     mix-blend-mode: multiply;
     z-index: 1;
     display: block;
+    transform: translateX(8%);
   }
 
   .hero-placeholder {

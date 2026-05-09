@@ -77,7 +77,7 @@ const styles = `
 
   /* Conteúdo em 2 colunas */
   .content-two-col {
-    display: grid; grid-template-columns: 1fr 1fr;
+    display: grid; grid-template-columns: repeat(3, 1fr);
     gap: 40px; margin-bottom: 0;
   }
 
@@ -191,7 +191,7 @@ export default function Sobre() {
           {/* Linha 1: Competências (esquerda grande) + Formação (direita) */}
           <div className="content-two-col">
 
-            <section className="sobre-section">
+            <section className="sobre-section" style={{gridColumn: "span 2"}}>
               <div className="sobre-section-label">Competências</div>
               <div className="skills-grid">
                 {["Product Design","Enterprise UX","Service Design","Sistemas Complexos","UX Writing","Prototipação","Figma","Salesforce","OutSystems","Notion","Miro","Jira"].map((s, i) => (
@@ -226,7 +226,7 @@ export default function Sobre() {
           {/* Linha 2: Trajetória (esquerda) + Experiência em Destaque (direita) */}
           <div className="content-two-col">
 
-            <section className="sobre-section">
+            <section className="sobre-section" style={{gridColumn: "span 2"}}>
               <div className="sobre-section-label">Trajetória</div>
               <div className="timeline">
                 {[
