@@ -179,8 +179,8 @@ const styles = `
     position: absolute;
     inset: 0;
     background-repeat: no-repeat;
-    background-size: auto 112%;
-    background-position: right center;
+    background-size: auto 100%;
+    background-position: 70% center;
     mix-blend-mode: multiply;
     opacity: 0;
     animation: fadeInImg 1s ease forwards 0.5s;
@@ -298,8 +298,8 @@ const styles = `
     .hero-media { min-height: 420px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 
     .hero-illustration {
-      background-position: center bottom;
-      background-size: auto 100%;
+      background-position: center top;
+      background-size: auto 90%;
     }
 
     .cases-section { padding: 48px 20px; }
