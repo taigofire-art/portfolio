@@ -180,7 +180,7 @@ const styles = `
     inset: 0;
     background-repeat: no-repeat;
     background-size: auto 100%;
-    background-position: 70% center;
+    background-position: 60% center;
     mix-blend-mode: multiply;
     opacity: 0;
     animation: fadeInImg 1s ease forwards 0.5s;
