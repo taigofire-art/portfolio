@@ -233,7 +233,7 @@ export default function Sobre() {
               <div className="sobre-section-label">Trajetória</div>
               <div className="timeline">
                 {[
-                  { year: "2017", text: "Início da transição para UX — desenvolvimento de produtos digitais centrados no usuário." },
+                { year: "2010 até 2019", text: "Trabalhando como Web Designer em empresas como Casas Bahia, Fnac, e Koral Fight Co." },  
                   { year: "2019", text: <><strong>Cielo</strong> — UX Designer na maquininha de cartão e sistemas de atendimento.</> },
                   { year: "2021", text: <><strong>Banco BV</strong> via Mooven — sistemas complexos, Salesforce e atendimento omnichannel.</> },
                   { year: "2024", text: <><strong>Petrobras</strong> via TCS — sistemas corporativos com OutSystems, fluxos e protótipos.</> },
