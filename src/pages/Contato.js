@@ -127,7 +127,7 @@ export default function Contato() {
             </a>
 
             <a className="contact-item"
-              href="https://linkedin.com/in/tiagoadecarvalho"
+              href="https://www.linkedin.com/in/tiagoadecarvalho/"
               target="_blank" rel="noopener noreferrer">
               <div className="contact-icon">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
