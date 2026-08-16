@@ -628,13 +628,13 @@ export default function PortfolioHome() {
             <p className="hero-eyebrow">Senior Product Designer · 13+ anos</p>
 
             <h1 className="hero-title">
-              Produtos Enterprise não<br />precisam ser <span className="hero-title-accent">complicados.</span>
+              Produtos digitais não<br />precisam ser <span className="hero-title-accent">complicados.</span>
             </h1>
 
             <p className="hero-sub">
-              Transformo sistemas complexos, processos manuais e operações
-              críticas em produtos digitais que reduzem tempo, risco e
-              aceleram decisões.
+              Transformo sistemas complexos, processos fragmentados
+              em experiências digitais mais simples,
+              eficientes e fáceis de usar.
             </p>
 
             <div className="hero-actions">
